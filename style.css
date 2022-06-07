@@ -1,0 +1,874 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+
+
+body.red
+{
+    --000: red;
+    --fff: red;
+    --google-logo-color: red;
+}
+
+body.black
+{
+    --000: #000;
+    --fff: #000;
+    --google-logo-color: #000;
+    --0000: #fff;
+}
+
+body.white
+{
+    --000: #fff;
+    --fff: #fff;
+    --google-logo-color: #fff;
+}
+
+body.yellow
+{
+    --000: yellow;
+    --fff: yellow;
+    --google-logo-color: yellow;
+}
+
+body.green
+{
+    --000: green;
+    --fff: green;
+    --google-logo-color: green;
+}
+
+body.blueviolet
+{
+    --000: blueviolet;
+    --fff: blueviolet;
+    --google-logo-color: blueviolet;
+}
+
+body.orange
+{
+    --000: orange;
+    --fff: orange;
+    --google-logo-color: orange;
+}
+body.blue
+{
+    --000: blue;
+    --fff: blue;
+    --google-logo-color: blue;
+}
+
+:root{
+    --000: #000;
+    --0000: #000;
+    --fff: #fff;
+    --242526: #242526;
+    --google-logo-color: rgba(255, 255, 255, 0.705);
+    --shadow: rgba(51, 51, 51, 0.274);
+    --blue: blue;
+    --button-color: rgb(22, 61, 238);
+    --button-hover: rgb(75, 107, 250);
+    --popup-bg: rgba(0, 0, 0, 0.555);
+    --hover:  rgba(255, 255, 255, 0.281);
+}
+
+
+.container
+{
+    background: var(--242526);
+    background-size: cover !important;
+    background-position: center !important;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google
+{
+    width: 50%;
+    padding: 20px 50px;
+    z-index: 15;
+}
+
+.google h1
+{
+    text-align: center;
+    font-size: 6em;
+    font-weight: 500;
+    color: var(--google-logo-color);
+}
+
+
+.search
+{
+    width: 100%;
+    position: relative;
+    margin: 20px 0; 
+}
+
+.search input
+{
+    width: 100%;
+    padding: 10px 50px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background: #fff;
+    box-shadow: 0 3px 10px var(--shadow);
+    font-size: 1.2em;
+}
+
+.search i
+{
+    position: absolute;
+    color: var(--blue);
+}
+
+
+#searchIcon
+{
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: default;
+}
+
+#microIcon
+{
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: default;
+    font-size: 1.2em;
+ 
+}
+
+
+.labels
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.lebel
+{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: default;
+    border-radius: 10px;
+    padding: 15px 0;
+    color:var(--fff);
+    position: relative;
+}
+
+
+.lebel:hover
+{
+    background: var(--hover);
+}
+
+.lebel i
+{
+    font-size: 1.3em;
+    background: var(--hover);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--000);
+}
+
+
+
+
+#edit
+{
+    position: absolute;
+    font-size: 1em;
+    right: 20px;
+    bottom: 20px;
+    color: var(--google-logo-color);
+    background: var(--0000);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#edit i
+{
+   z-index: 5;
+}
+
+
+
+
+
+
+
+.popup
+{
+    width: 100%;
+    height: 100vh;
+    background: var(--popup-bg);
+    position: absolute;
+    left: 0;
+    top: 0%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+
+
+.popup.active
+{
+    display: flex;
+}
+
+
+
+.popuo-box
+{
+    width: 60%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--242526);
+    color: var(--fff);
+    transition: .5s;
+}
+
+
+
+
+
+
+.popup-header
+{
+    width: 100%;
+    padding: 0 20px;
+    height: 10%;
+    display: flex;
+    align-items:center;
+}
+
+
+
+.popup-body
+{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+}
+
+
+
+
+.right-menu
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+}
+
+
+.right-menu .box
+{
+    position: absolute;
+    width: 100%;
+    overflow: auto !important;
+    background: var(--242526);
+}
+
+
+
+
+.right-menu .text-color
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.color-is
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+.color-is.active
+{
+    border: 3px solid blue;
+}
+
+.right-menu::-webkit-scrollbar
+{
+    width: 8px;
+    background: transparent;
+}
+.right-menu::-webkit-scrollbar-thumb
+{
+    background: var(--hover);
+    border-radius: 30px;
+}
+
+
+.popup-footer
+{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+.popup-footer button,
+.done-isUrl button
+{
+    background: var(--button-color);
+    color: #fff;
+    padding: 8px 25px;
+    border: none;
+    outline: none;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-footer button:hover,
+.done-isUrl button:hover
+{
+    background: var(--button-hover);
+}
+
+
+.box.text-color
+{
+    display: none;
+}
+
+
+
+.doneUrlBtn
+{
+    display: none;
+}
+
+
+
+.popup-lebel
+{
+    position: absolute;
+    right: -120px;
+    top: -40px;
+    background: var(--242526);
+    width: 120px;
+    height: auto;
+    display: none;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.popup-lebel p
+{
+
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.popup-lebel p:hover
+{
+    background: #3e3f41;
+}
+
+
+
+
+.popup-lebel.active
+{
+    display: block;
+}
+
+.popup-lebel i
+{
+    font-size: 1em;
+    background: none;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+}
+
+
+
+
+
+
+
+.box.bg-imgs
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto !important;
+    display: none;
+}
+
+
+.box.bg-imgs.active
+{
+    display: grid;
+}
+
+.box.text-color.active
+{
+    display: flex;
+}
+
+
+
+
+
+.bg-img
+{
+    height: 100px;
+}
+
+.bg-img.active
+{
+    border: 4px solid var(--blue);
+}
+
+
+.bg-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.left-menu
+{
+    width: 35%;
+    padding: 30px 0;
+}
+
+.tool
+{
+    padding: 8px 20px;
+    margin: 10px 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    cursor: default;
+    cursor: pointer;
+}
+
+.tool.active,
+.tool:hover
+{
+background: var(--hover);
+}
+
+
+.tool i 
+{
+    margin-right: 5px;
+}
+
+
+
+#white
+{
+    background: #fff;
+    position: relative;
+}
+
+#white::before
+{
+    content: 'White';
+    color: #000;
+}
+
+
+#black
+{
+    background: #000;
+}
+#black::before
+{
+    content: 'Black';
+    color: #fff;
+}
+
+#red
+{
+    background: red;
+}
+
+#red::before
+{
+    content: 'Red';
+    color: #fff;
+}
+
+#yellow
+{
+    background: yellow;
+}
+
+#yellow::before
+{
+    content: 'Yellow';
+    color: #fff;
+}
+
+
+
+#blue
+{
+    background: blue;
+}
+
+#blue::before
+{
+    content: 'Blue';
+    color: #fff;
+}
+
+
+
+
+#orange
+{
+    background: orange;
+}
+
+#orange::before
+{
+    content: 'Orange';
+    color: #fff;
+}
+
+#blueviolet
+{
+    background: blueviolet;
+    color: #fff;
+}
+
+
+#blueviolet::before
+{
+    content: 'Blueviolet';
+    color: #fff;
+}
+
+
+#green
+{
+    background: green;
+}
+
+#green::before
+{
+    content: 'Green';
+    color: #fff;
+}
+
+
+
+
+
+
+
+.menu
+{
+    display: none;
+}
+
+
+#option
+{
+    position: absolute;
+    background: none;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.lebel:hover #option
+{
+    opacity: 1;
+}
+
+
+
+
+.addedDiv
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.514);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.addedDiv.active
+{
+    display: flex;
+}
+
+.form
+{
+    width: 40%;
+    height: auto;
+    background: var(--242526);
+    border-radius: 8px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--fff);
+}
+
+form input
+{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+
+
+
+.done-isUrl
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.done-isUrl button
+{
+    margin-top: 20px;
+}
+
+
+.menu-res
+{
+    display: none;
+}
+
+
+
+
+
+
+@media (max-width: 700px) {
+    .google
+    {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .labels
+    {
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px;
+        padding: 0;
+    }
+
+    .google h1
+    {
+        font-size: 4em;
+    }
+
+    .edit
+    {
+        z-index: 999;
+    }
+
+    .popuo-box
+    {
+        width: 90%;
+        height: auto;
+        position: relative;
+    }
+
+    .popup
+    {
+        overflow: auto;
+        height: 100vh;
+        padding: 40px 0;
+    }
+
+    .popup-header
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .popup-footer,
+    .popup-header
+    {
+        padding: 20px;
+    }
+
+    .popup-body
+    {
+        flex-direction: column;
+        overflow-y: auto;
+        position: relative;
+    }
+
+    .menu-res
+    {
+        display: block;
+    }
+    .left-menu
+    {
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background: var(--242526);
+        transition: .5s;
+    }
+
+    .right-menu
+    {
+        height: 60vh;
+    }
+
+
+    .menu
+    {
+        width: 40px;
+        height: 40px;
+        background: var(--242526);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        z-index: 999 !important;
+        transform: rotate(180deg);
+        cursor: pointer;
+        transition: .5s;
+        box-shadow: 0 0 5px #fff;
+        display: none;
+    }
+    
+
+    .left-menu.active
+    {
+        left: -100%;
+    }
+
+    .menu.active
+    {
+        transform: rotate(0deg);
+        right: -30px;
+    }
+
+
+        
+    .popup-lebel
+    {
+        position: absolute;
+        right: -10px;
+        top: 80px;
+        background: var(--242526);
+        width: 120px;
+        height: auto;
+        display: none;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .form
+    {
+        width: 90%;
+        height: 50%;
+    }
+}

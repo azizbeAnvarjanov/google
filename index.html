@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'/>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+
+   
+    <div class="container">
+        <div class="google">
+            <h1>Google  </h1>
+            <form class="search">
+                <i id="searchIcon" class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search...">
+                <i id="microIcon" class="fa-solid fa-microphone"></i>
+            </form>
+            <div class="labels">
+                <div class="lebel" >
+                    <div href="#" class="lebel-logo">
+                        <i id="add-lebel" class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="title">Add</div>
+                </div>
+            </div>
+        </div>
+      
+
+        <div class="edit"><i class="fa-solid fa-pen" id="edit"></i></div>
+
+
+
+        <div class="popup">
+            <div class="popuo-box">
+                <div class="popup-header">
+                    <h3>Edit this window</h3>
+                    <div class="menu-res"><i class="fa-solid fa-gear"></i></div>
+                </div>
+                <div class="popup-body">
+                    <div class="left-menu">
+                        <div class="menu"><i class="fa-solid fa-angle-right"></i></div>
+                        <div data-index="0" class="tool active"><i class="fa-solid fa-image"></i> Bg-img change</div>
+                        <div data-index="1" class="tool"><i class="fa-solid fa-font"></i> Text Color</div>
+                        <div data-index="2" class="tool"><i class="fa-solid fa-file-image"></i> Tool</div>
+                        <div data-index="3" class="tool"><i class="fa-solid fa-icons"></i> Tool</div>
+                        <div data-index="4" class="tool"><i class="fa-solid fa-display"></i> Tool</div>
+                        <div data-index="5" class="tool"><i class="fa-solid fa-sd-card"></i> Tool</div>
+                    </div>
+                    <div class="right-menu">
+                        <div data-in="0" class="box bg-imgs active">
+                            <div class="bg-img"><img src="./imgs/1.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/2.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/3.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/4.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/5.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/6.webp" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/7.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/8.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/9.webp" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/10.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/11.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/12.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/13.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/14.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/15.jpg" alt=""></div>
+                            <div class="bg-img"><img src="./imgs/16.jpg" alt=""></div>
+                        </div>
+                        <div data-in="1" class="box text-color">
+                            <div id="white"  class="color-is "></div>
+                            <div id="black"  class="color-is "></div>
+                            <div id="red"  class="color-is "></div>
+                            <div id="yellow"  class="color-is "></div>
+                            <div id="blue"  class="color-is "></div>
+                            <div id="orange"  class="color-is "></div>
+                            <div id="blueviolet"  class="color-is "></div>
+                            <div id="green"  class="color-is "></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="popup-footer">
+                    <button class="closeBtn">Close</button>
+                    <button class="doneBtn">Done</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="addedDiv">
+            <form class="form">
+                <label>Name</label>
+                <input type="text"  class="name-input" placeholder="Name is lebel">
+                <label>URL</label>
+                <input type="text" class="url-input" placeholder="URL...">
+                <div class="done-isUrl">
+                    <button class="closeUrl">Close</button>
+                    <button class="doneUrlBtn">Done</button>
+                </div>
+            </form>
+        </div>
+    
+
+
+
+    <!-- script link -->
+    <script src="./app.js"></script>
+</body>
+</html>
